@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AneeTV — Premium IPTV Nederland & België | 69.000+ Zenders</title>
+    <meta name="description" content="AneeTV is een premium IPTV-service met 69.000+ wereldwijde zenders en 170.000+ films & series in 4K, FHD & HD. Directe activatie, anti-buffer technologie en 7 dagen geld-terug-garantie." />
+    <meta name="theme-color" content="#0f172a" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="AneeTV — Premium IPTV Nederland & België" />
+    <meta property="og:description" content="69.000+ wereldwijde zenders en 170.000+ films & series in 4K, FHD & HD. Directe activatie, geen contracten, 7 dagen geld-terug-garantie." />
+    <meta property="og:image" content="/favicon.svg" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="AneeTV — Premium IPTV Nederland & België" />
+    <meta name="twitter:description" content="69.000+ wereldwijde zenders en 170.000+ films & series in 4K, FHD & HD." />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "AneeTV",
+        "description": "Premium IPTV-service met 69.000+ wereldwijde zenders en 170.000+ films & series in 4K, FHD & HD.",
+        "areaServed": ["NL", "BE"],
+        "sameAs": []
+      }
+    </script>
+    <script>
+      (function () {
+        var stored = localStorage.getItem('aneetv-theme');
+        var isDark = stored ? stored === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.classList.toggle('dark', isDark);
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

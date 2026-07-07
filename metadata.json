@@ -1,0 +1,6 @@
+{
+  "name": "AneeTV IPTV",
+  "description": "Premium IPTV provider offering 69,000+ high-quality international channels and 170,000+ movies & series with anti-buffer technology. Interactive channel listing, installation guides, and support.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
