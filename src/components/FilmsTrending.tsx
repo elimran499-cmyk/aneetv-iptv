@@ -34,7 +34,7 @@ export default function FilmsTrending() {
             Populaire <span className="text-red-600 dark:text-red-400">Films & Series</span>
           </h2>
           <p className="text-slate-500 dark:text-slate-400">
-            Een selectie van veelbekeken Nederlandse films en series, inbegrepen in de VOD-bibliotheek van elk AneeTV-abonnement.
+            Een selectie van wereldwijd trending films, aangevuld met Nederlandse klassiekers — allemaal inbegrepen in de VOD-bibliotheek van elk AneeTV-abonnement.
           </p>
         </div>
 

@@ -99,6 +99,24 @@ export default function Pricing({ onSelectPlan }: PricingProps) {
                 </div>
               </div>
 
+              {/* Price — shown at the top of the card */}
+              <div className="mb-4">
+                <div className="flex items-baseline flex-wrap gap-x-2">
+                  <span className="text-4xl font-black text-slate-900 dark:text-white">€{computedPrice}</span>
+                  <span className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase">/ {plan.durationMonths} {plan.durationMonths === 1 ? 'maand' : 'maanden'}</span>
+                </div>
+                {plan.originalPrice && !vpn && (
+                  <div className="flex items-center gap-2 mt-1">
+                    <span className="text-sm font-semibold text-slate-400 dark:text-slate-500 line-through">€{plan.originalPrice}</span>
+                  </div>
+                )}
+                {vpn && (
+                  <p className="text-[10px] text-slate-500 dark:text-slate-400 mt-1">
+                    incl. Premium VPN
+                  </p>
+                )}
+              </div>
+
               {/* Short Description */}
               <p className="text-xs text-slate-600 dark:text-slate-300 mb-6 leading-relaxed border-b border-slate-200/80 dark:border-slate-800/80 pb-4">
                 {plan.description}
@@ -148,24 +166,6 @@ export default function Pricing({ onSelectPlan }: PricingProps) {
                     />
                   </button>
                 </div>
-              </div>
-
-              {/* Price */}
-              <div className="mb-4 pt-4 border-t border-slate-200/80 dark:border-slate-800/80">
-                <div className="flex items-baseline flex-wrap gap-x-2">
-                  <span className="text-4xl font-black text-slate-900 dark:text-white">€{computedPrice}</span>
-                  <span className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase">/ {plan.durationMonths} {plan.durationMonths === 1 ? 'maand' : 'maanden'}</span>
-                </div>
-                {plan.originalPrice && !vpn && (
-                  <div className="flex items-center gap-2 mt-1">
-                    <span className="text-sm font-semibold text-slate-400 dark:text-slate-500 line-through">€{plan.originalPrice}</span>
-                  </div>
-                )}
-                {vpn && (
-                  <p className="text-[10px] text-slate-500 dark:text-slate-400 mt-1">
-                    incl. Premium VPN
-                  </p>
-                )}
               </div>
 
               {/* Order CTA - opens WhatsApp directly with the pack pre-filled */}
