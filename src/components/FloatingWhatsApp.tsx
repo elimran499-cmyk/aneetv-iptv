@@ -8,7 +8,7 @@ interface FloatingWhatsAppProps {
 export default function FloatingWhatsApp({ selectedPlanName }: FloatingWhatsAppProps) {
   const message = selectedPlanName
     ? `Hallo! Ik heb een vraag over het pakket: ${selectedPlanName}.`
-    : 'Hallo! Ik heb een vraag over AneeTV IPTV.';
+    : 'Hallo! Ik heb een vraag over AneeTV.';
   const href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 
   return (
