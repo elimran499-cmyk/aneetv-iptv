@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://aneetv.org/sitemap.xml
+Sitemap: https://www.aneetv.org/sitemap.xml
