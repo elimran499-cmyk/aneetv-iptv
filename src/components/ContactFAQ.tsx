@@ -28,7 +28,7 @@ export default function ContactFAQ() {
     })),
   }), []);
 
-  const whatsappMessage = 'Hallo! Ik heb een vraag over AneeTV IPTV.';
+  const whatsappMessage = 'Hallo! Ik heb een vraag over AneeTV.';
   const whatsappHref = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(whatsappMessage)}`;
 
   return (
