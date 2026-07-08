@@ -31,7 +31,10 @@ export default function Footer({ onNavigate }: FooterProps) {
                 Anee<span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-700">TV</span>
               </span>
             </button>
-            
+            <p className="text-[11px] font-bold text-red-600 dark:text-red-400 tracking-wide uppercase">
+              AneeTV Netherlands &amp; België
+            </p>
+
             <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed max-w-sm">
               AneeTV is de nummer #1 premium IPTV aanbieder in de Benelux en heel Europa. Wij leveren stabiele televisiediensten van de hoogste kwaliteit door gebruik te maken van lokale high-speed CDN-caches.
             </p>
