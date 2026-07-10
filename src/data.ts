@@ -67,7 +67,6 @@ export const PLANS_DATA: Plan[] = [
       '24/7 VIP Prioriteitsondersteuning',
       'Directe activatie na betaling',
       'Terugkijken TV & Volledige EPG',
-      'Optionele Volwassenenkanalen (18+)',
       '14 Dagen Geld-Terug-Garantie',
       'Geen verborgen kosten'
     ],
