@@ -105,10 +105,15 @@ export default function Pricing({ onSelectPlan }: PricingProps) {
                   <span className="text-4xl font-black text-slate-900 dark:text-white">€{computedPrice}</span>
                   <span className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase">/ {plan.durationMonths} {plan.durationMonths === 1 ? 'maand' : 'maanden'}</span>
                 </div>
-                {plan.originalPrice && (
+                {plan.originalPrice && !vpn && (
                   <div className="flex items-center gap-2 mt-1">
                     <span className="text-sm font-semibold text-slate-400 dark:text-slate-500 line-through">€{plan.originalPrice}</span>
                   </div>
+                )}
+                {vpn && (
+                  <p className="text-[10px] text-slate-500 dark:text-slate-400 mt-1">
+                    incl. Premium VPN
+                  </p>
                 )}
               </div>
 
