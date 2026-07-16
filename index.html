@@ -3,6 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Performance: warm up connections to the origins we fetch from early -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://www.google.com" />
+    <link rel="dns-prefetch" href="https://m.media-amazon.com" />
+    <link rel="dns-prefetch" href="https://api.dicebear.com" />
+    <!-- Fonts loaded here (not via CSS @import) so the browser discovers them immediately; secondary families trimmed to the weights actually used -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Sora:wght@600;700;800&family=Plus+Jakarta+Sans:wght@700;800&family=JetBrains+Mono:wght@400;700&display=swap" />
+
     <title>AneeTV Netherlands — Premium IPTV Nederland & België | 69.000+ Zenders</title>
     <meta name="description" content="AneeTV Netherlands: premium IPTV-service met 69.000+ wereldwijde zenders en 170.000+ films & series in 4K, FHD & HD. Directe activatie, anti-buffer technologie en 7 dagen geld-terug-garantie voor Nederland en België." />
     <meta name="robots" content="index, follow" />
