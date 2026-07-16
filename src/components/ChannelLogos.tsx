@@ -3,14 +3,14 @@ import { useState } from 'react';
 // Real logo marks for Dutch broadcasters/streaming brands, sourced live from
 // each brand's own official site favicon (verified distinct, not a generic fallback icon).
 const CHANNELS: { name: string; domain: string }[] = [
-  { name: 'NPO', domain: 'npo.nl' },
-  { name: 'NPO Start', domain: 'npostart.nl' },
-  { name: 'RTL', domain: 'rtl.nl' },
-  { name: 'SBS6', domain: 'sbs6.nl' },
+  { name: 'Netflix', domain: 'netflix.com' },
+  { name: 'Disney+', domain: 'disneyplus.com' },
+  { name: 'Apple TV+', domain: 'tv.apple.com' },
+  { name: 'HBO Max', domain: 'max.com' },
+  { name: 'Prime Video', domain: 'primevideo.com' },
   { name: 'Videoland', domain: 'videoland.com' },
   { name: 'Ziggo Sport', domain: 'ziggosport.nl' },
   { name: 'Eurosport', domain: 'eurosport.nl' },
-  { name: 'KPN', domain: 'kpn.com' },
   { name: 'National Geographic', domain: 'nationalgeographic.nl' },
   { name: 'TLC', domain: 'tlc.nl' },
 ];
