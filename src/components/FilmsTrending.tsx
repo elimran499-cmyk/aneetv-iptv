@@ -63,6 +63,7 @@ export default function FilmsTrending() {
                       alt={film.title}
                       className="absolute inset-0 h-full w-full object-cover"
                       loading="lazy"
+                      decoding="async"
                       onError={() => setFailedPosters((prev) => new Set(prev).add(listIdx))}
                     />
                   ) : (
