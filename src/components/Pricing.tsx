@@ -9,6 +9,8 @@ interface PricingProps {
   onSelectPlan: (planName: string, totalPrice: number) => void;
 }
 
+const VPN_ADDON_PRICE = 10;
+
 // Metallic tier gradient matching each plan's name (silver / gold / platinum)
 const PLAN_NAME_GRADIENTS: Record<string, string> = {
   'plan-3m': 'bg-gradient-to-r from-slate-500 via-slate-300 to-slate-500 dark:from-slate-300 dark:via-white dark:to-slate-400',
