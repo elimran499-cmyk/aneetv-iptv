@@ -80,6 +80,7 @@ export default function Testimonials() {
                     alt={testimonial.name}
                     className="flex-shrink-0 h-9 w-9 rounded-full border border-red-200 dark:border-red-900/40"
                     loading="lazy"
+                    decoding="async"
                     onError={() => setFailedAvatars((prev) => new Set(prev).add(idx))}
                   />
                 )}
