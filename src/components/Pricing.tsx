@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Check, ShieldCheck } from 'lucide-react';
+import { Check } from 'lucide-react';
 import { PLANS_DATA } from '../data';
 import { WHATSAPP_NUMBER } from '../constants';
 import WhatsAppIcon from './WhatsAppIcon';
