@@ -8,7 +8,6 @@ const CHANNELS: { name: string; domain: string }[] = [
   { name: 'Apple TV+', domain: 'tv.apple.com' },
   { name: 'HBO Max', domain: 'max.com' },
   { name: 'Prime Video', domain: 'primevideo.com' },
-  { name: 'Paramount+', domain: 'paramountplus.com' },
   { name: 'Peacock', domain: 'peacocktv.com' },
   { name: 'Discovery+', domain: 'discoveryplus.com' },
   { name: 'ESPN', domain: 'espn.com' },
