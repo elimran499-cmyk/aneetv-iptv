@@ -118,36 +118,6 @@ export default function Pricing({ onSelectPlan }: PricingProps) {
                 ))}
               </ul>
 
-              {/* Customization: VPN */}
-              <div className="mb-6">
-                <div className="flex items-center justify-between gap-2 bg-slate-50/60 dark:bg-slate-900/60 p-3 rounded-xl border border-slate-200 dark:border-slate-800">
-                  <div className="flex items-center gap-2 min-w-0">
-                    <div className="flex-shrink-0 p-1.5 rounded-lg bg-red-500/10 text-red-600 dark:text-red-400">
-                      <ShieldCheck className="h-4 w-4" />
-                    </div>
-                    <span className="text-xs font-bold text-slate-700 dark:text-slate-200">
-                      Premium VPN <span className="text-slate-400 dark:text-slate-500 font-semibold">· +€{VPN_ADDON_PRICE},00</span>
-                    </span>
-                  </div>
-                  <button
-                    type="button"
-                    role="switch"
-                    aria-checked={vpn}
-                    onClick={() => toggleVpn(plan.id)}
-                    id={`plan-${plan.id}-vpn-toggle`}
-                    className={`relative flex-shrink-0 w-[38px] h-[22px] rounded-full transition-colors cursor-pointer ${
-                      vpn ? 'bg-red-500' : 'bg-slate-300 dark:bg-slate-700'
-                    }`}
-                  >
-                    <span
-                      className={`absolute top-0.5 left-0.5 h-[18px] w-[18px] rounded-full bg-white shadow-md transition-transform ${
-                        vpn ? 'translate-x-[16px]' : 'translate-x-0'
-                      }`}
-                    />
-                  </button>
-                </div>
-              </div>
-
               {/* Order CTA - opens WhatsApp directly with the pack pre-filled */}
               <a
                 href={whatsappOrderHref}
