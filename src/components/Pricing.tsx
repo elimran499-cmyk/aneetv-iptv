@@ -19,6 +19,11 @@ const PLAN_NAME_GRADIENTS: Record<string, string> = {
 };
 
 export default function Pricing({ onSelectPlan }: PricingProps) {
+  const [vpnByPlan, setVpnByPlan] = useState<Record<string, boolean>>({});
+
+  const toggleVpn = (planId: string) =>
+    setVpnByPlan((prev) => ({ ...prev, [planId]: !prev[planId] }));
+
   return (
     <section id="pricing" className="py-20 bg-white dark:bg-slate-950 text-slate-900 dark:text-white relative">
       {/* Background radial glow */}
