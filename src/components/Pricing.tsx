@@ -130,6 +130,12 @@ export default function Pricing({ onSelectPlan }: PricingProps) {
                     <span className="leading-tight">{feature}</span>
                   </li>
                 ))}
+                {vpn && (
+                  <li className="flex items-start space-x-2.5 text-xs text-red-700 dark:text-red-300 font-semibold">
+                    <Check className="h-3.5 w-3.5 text-red-600 dark:text-red-400 flex-shrink-0 mt-0.5" />
+                    <span className="leading-tight">Premium VPN Extra Inbegrepen</span>
+                  </li>
+                )}
               </ul>
 
               {/* Order CTA - opens WhatsApp directly with the pack pre-filled */}
