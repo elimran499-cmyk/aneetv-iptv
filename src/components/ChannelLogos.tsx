@@ -45,6 +45,7 @@ export default function ChannelLogos() {
                   alt={channel.name}
                   className="h-9 w-9 object-contain rounded-md"
                   loading="lazy"
+                  decoding="async"
                   onError={() => setFailedLogos((prev) => new Set(prev).add(key))}
                 />
               </span>
