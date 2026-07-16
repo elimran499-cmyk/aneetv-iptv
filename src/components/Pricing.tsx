@@ -48,9 +48,10 @@ export default function Pricing({ onSelectPlan }: PricingProps) {
         {/* Pricing Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch mb-12 max-w-5xl mx-auto">
           {PLANS_DATA.map((plan) => {
-            const computedPrice = plan.price;
-            const planLabel = plan.name;
-            const whatsappOrderMessage = `Hallo! Ik wil graag dit pakket bestellen:\n\nPakket: ${plan.name}\nLooptijd: ${plan.durationMonths} ${plan.durationMonths === 1 ? 'maand' : 'maanden'}\nSchermen: ${plan.screens}\nTotaalprijs: €${computedPrice}\n\nKunnen jullie me helpen met de bestelling?`;
+            const vpn = vpnByPlan[plan.id] ?? false;
+            const computedPrice = Math.round((plan.price + (vpn ? VPN_ADDON_PRICE : 0)) * 100) / 100;
+            const planLabel = `${plan.name}${vpn ? ' + VPN' : ''}`;
+            const whatsappOrderMessage = `Hallo! Ik wil graag dit pakket bestellen:\n\nPakket: ${plan.name}\nLooptijd: ${plan.durationMonths} ${plan.durationMonths === 1 ? 'maand' : 'maanden'}\nSchermen: ${plan.screens}\nPremium VPN: ${vpn ? 'Ja' : 'Nee'}\nTotaalprijs: €${computedPrice}\n\nKunnen jullie me helpen met de bestelling?`;
             const whatsappOrderHref = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(whatsappOrderMessage)}`;
 
             return (
