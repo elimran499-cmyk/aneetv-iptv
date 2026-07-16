@@ -8,11 +8,13 @@ const CHANNELS: { name: string; domain: string }[] = [
   { name: 'Apple TV+', domain: 'tv.apple.com' },
   { name: 'HBO Max', domain: 'max.com' },
   { name: 'Prime Video', domain: 'primevideo.com' },
-  { name: 'Videoland', domain: 'videoland.com' },
-  { name: 'Ziggo Sport', domain: 'ziggosport.nl' },
-  { name: 'Eurosport', domain: 'eurosport.nl' },
-  { name: 'National Geographic', domain: 'nationalgeographic.nl' },
-  { name: 'TLC', domain: 'tlc.nl' },
+  { name: 'Paramount+', domain: 'paramountplus.com' },
+  { name: 'Peacock', domain: 'peacocktv.com' },
+  { name: 'Discovery+', domain: 'discoveryplus.com' },
+  { name: 'ESPN', domain: 'espn.com' },
+  { name: 'DAZN', domain: 'dazn.com' },
+  { name: 'National Geographic', domain: 'nationalgeographic.com' },
+  { name: 'TLC', domain: 'tlc.com' },
 ];
 
 export default function ChannelLogos() {
