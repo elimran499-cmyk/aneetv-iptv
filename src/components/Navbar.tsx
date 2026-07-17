@@ -72,8 +72,7 @@ export default function Navbar({ onNavigate, activeSection }: NavbarProps) {
                 >
                   {item.label}
                   {isActive && (
-                    <motion.div 
-                      layoutId="activeIndicator"
+                    <span
                       className="absolute bottom-0 left-2 right-2 h-0.5 bg-gradient-to-r from-red-500 to-red-700 rounded-full"
                     />
                   )}
