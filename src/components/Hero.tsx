@@ -1,4 +1,4 @@
-import { motion } from 'motion/react';
+import { m } from 'motion/react';
 import { ChevronRight, Activity, Tv, Star, Users, Film } from 'lucide-react';
 import WhatsAppIcon from './WhatsAppIcon';
 
