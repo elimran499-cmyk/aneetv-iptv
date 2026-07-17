@@ -87,5 +87,6 @@ export default function App() {
       <FloatingWhatsApp selectedPlanName={selectedPlanName} />
       <CookieConsent />
     </div>
+    </LazyMotion>
   );
 }
