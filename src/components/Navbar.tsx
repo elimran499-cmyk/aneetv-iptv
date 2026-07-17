@@ -161,7 +161,7 @@ export default function Navbar({ onNavigate, activeSection }: NavbarProps) {
                 </button>
               </div>
             </div>
-          </motion.div>
+          </m.div>
         )}
       </AnimatePresence>
     </nav>
