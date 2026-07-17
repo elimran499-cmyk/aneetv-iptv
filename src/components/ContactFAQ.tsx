@@ -1,5 +1,5 @@
 import { useState, useMemo } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
+import { m, AnimatePresence } from 'motion/react';
 import { ChevronDown, ChevronUp, Headphones, MessageSquare, Clock, ShieldCheck } from 'lucide-react';
 import { FAQS_DATA } from '../data';
 import { WHATSAPP_NUMBER } from '../constants';
@@ -107,7 +107,7 @@ export default function ContactFAQ() {
 
                     <AnimatePresence initial={false}>
                       {isOpen && (
-                        <motion.div
+                        <m.div
                           initial={{ height: 0, opacity: 0 }}
                           animate={{ height: 'auto', opacity: 1 }}
                           exit={{ height: 0, opacity: 0 }}
@@ -116,7 +116,7 @@ export default function ContactFAQ() {
                           <div className="px-4.5 pb-4.5 text-xs text-slate-500 dark:text-slate-400 leading-relaxed border-t border-slate-100/60 dark:border-slate-900/60 pt-3">
                             {faq.answer}
                           </div>
-                        </motion.div>
+                        </m.div>
                       )}
                     </AnimatePresence>
                   </div>

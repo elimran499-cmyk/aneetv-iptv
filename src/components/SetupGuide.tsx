@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
+import { m, AnimatePresence } from 'motion/react';
 import { Tv, Monitor, Smartphone, Cpu, CheckCircle2, ChevronDown, ChevronUp, AlertTriangle, PlayCircle, HelpCircle } from 'lucide-react';
 import { DEVICES_GUIDES } from '../data';
 
@@ -200,7 +200,7 @@ export default function SetupGuide() {
 
                   <AnimatePresence initial={false}>
                     {isOpen && (
-                      <motion.div
+                      <m.div
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: 'auto', opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
@@ -209,7 +209,7 @@ export default function SetupGuide() {
                         <div className="px-4.5 pb-4.5 text-xs text-slate-500 dark:text-slate-400 leading-relaxed border-t border-slate-100/60 dark:border-slate-900/60 pt-3">
                           {item.a}
                         </div>
-                      </motion.div>
+                      </m.div>
                     )}
                   </AnimatePresence>
                 </div>

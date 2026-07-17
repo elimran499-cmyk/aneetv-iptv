@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
+import { m, AnimatePresence } from 'motion/react';
 import { Wifi, Activity, Play, CheckCircle2, AlertCircle, RefreshCw, Zap, Server } from 'lucide-react';
 
 export default function Diagnostics() {
@@ -138,7 +138,7 @@ export default function Diagnostics() {
                   <span>{progress}%</span>
                 </div>
                 <div className="h-2 bg-white dark:bg-slate-950 rounded-full overflow-hidden border border-slate-200 dark:border-slate-800">
-                  <motion.div
+                  <m.div
                     className="h-full bg-gradient-to-r from-red-500 via-red-500 to-red-400 rounded-full"
                     style={{ width: `${progress}%` }}
                   />
@@ -176,7 +176,7 @@ export default function Diagnostics() {
           )}
 
           {testState === 'completed' && (
-            <motion.div 
+            <m.div 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               className="space-y-8"
@@ -248,7 +248,7 @@ export default function Diagnostics() {
                 </div>
               </div>
 
-            </motion.div>
+            </m.div>
           )}
 
         </div>

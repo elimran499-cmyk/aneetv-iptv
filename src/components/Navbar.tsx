@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
+import { m, AnimatePresence } from 'motion/react';
 import { Tv, Menu, X, Zap, Sun, Moon } from 'lucide-react';
 
 interface NavbarProps {

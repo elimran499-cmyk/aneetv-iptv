@@ -23,7 +23,7 @@ export default function Hero({ onNavigate }: HeroProps) {
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative text-center">
         {/* Eyebrow */}
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: -15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -31,10 +31,10 @@ export default function Hero({ onNavigate }: HeroProps) {
         >
           <span className="h-1.5 w-1.5 rounded-full bg-red-500 animate-pulse" />
           PREMIUM IPTV NEDERLAND & BELGIË
-        </motion.div>
+        </m.div>
 
         {/* Headline — dedicated display font (Plus Jakarta Sans) for a distinct, professional look */}
-        <motion.h1
+        <m.h1
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
@@ -42,9 +42,9 @@ export default function Hero({ onNavigate }: HeroProps) {
         >
           Sluit je aan bij de toekomst van{' '}
           <span className="text-red-600 dark:text-red-500">televisie</span>
-        </motion.h1>
+        </m.h1>
 
-        <motion.p
+        <m.p
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
@@ -52,10 +52,10 @@ export default function Hero({ onNavigate }: HeroProps) {
         >
           Stream meer dan <strong className="text-slate-700 dark:text-slate-200">69.000 zenders</strong> en{' '}
           <strong className="text-slate-700 dark:text-slate-200">170.000+ films & series</strong> in haarscherpe 4K, zonder kabels of schotels.
-        </motion.p>
+        </m.p>
 
         {/* Primary CTA + subtle secondary link, instead of two equal-weight buttons */}
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
@@ -78,10 +78,10 @@ export default function Hero({ onNavigate }: HeroProps) {
             <WhatsAppIcon className="h-4.5 w-4.5 text-[#DC2626]" />
             <span>Chat direct via WhatsApp</span>
           </button>
-        </motion.div>
+        </m.div>
 
         {/* Rating + active status */}
-        <motion.div
+        <m.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.4 }}
@@ -93,10 +93,10 @@ export default function Hero({ onNavigate }: HeroProps) {
           </span>
           <span className="hidden sm:inline">·</span>
           <span>18.420+ actieve abonnees in Nederland & België</span>
-        </motion.div>
+        </m.div>
 
         {/* Stat row — flat, no card chrome, thin dividers only */}
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
@@ -111,10 +111,10 @@ export default function Hero({ onNavigate }: HeroProps) {
               <div className="text-[11px] text-slate-400 dark:text-slate-500 text-center">{stat.label}</div>
             </div>
           ))}
-        </motion.div>
+        </m.div>
 
         {/* Feature line — plain text with dot separators, no boxed chips */}
-        <motion.p
+        <m.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.6 }}
@@ -126,7 +126,7 @@ export default function Hero({ onNavigate }: HeroProps) {
               {feature}
             </span>
           ))}
-        </motion.p>
+        </m.p>
       </div>
     </section>
   );
