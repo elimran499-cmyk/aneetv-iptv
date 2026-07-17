@@ -62,6 +62,7 @@ export default function App() {
   }, []);
 
   return (
+    <LazyMotion features={domAnimation} strict>
     <div className="bg-white dark:bg-slate-950 min-h-screen text-slate-800 dark:text-slate-100 selection:bg-red-500 selection:text-white antialiased font-sans">
       {/* Sticky Header */}
       <Navbar onNavigate={handleNavigate} activeSection={activeSection} />
