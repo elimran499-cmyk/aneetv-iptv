@@ -127,7 +127,7 @@ export default function Navbar({ onNavigate, activeSection }: NavbarProps) {
       {/* Mobile Menu Slide-out */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div
+          <m.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
