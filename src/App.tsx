@@ -1,18 +1,21 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, lazy, Suspense } from 'react';
 import { LazyMotion, domAnimation } from 'motion/react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import ChannelLogos from './components/ChannelLogos';
-import FilmsTrending from './components/FilmsTrending';
-import Pricing from './components/Pricing';
-import Testimonials from './components/Testimonials';
-import AboutUs from './components/AboutUs';
-import SetupGuide from './components/SetupGuide';
-import Diagnostics from './components/Diagnostics';
-import ContactFAQ from './components/ContactFAQ';
-import Footer from './components/Footer';
-import FloatingWhatsApp from './components/FloatingWhatsApp';
-import CookieConsent from './components/CookieConsent';
+
+// Below-the-fold sections are code-split so they don't weigh down the initial
+// bundle. They download in parallel after first paint and stream in as ready.
+const AboutUs = lazy(() => import('./components/AboutUs'));
+const FilmsTrending = lazy(() => import('./components/FilmsTrending'));
+const Pricing = lazy(() => import('./components/Pricing'));
+const Testimonials = lazy(() => import('./components/Testimonials'));
+const SetupGuide = lazy(() => import('./components/SetupGuide'));
+const Diagnostics = lazy(() => import('./components/Diagnostics'));
+const ContactFAQ = lazy(() => import('./components/ContactFAQ'));
+const Footer = lazy(() => import('./components/Footer'));
+const FloatingWhatsApp = lazy(() => import('./components/FloatingWhatsApp'));
+const CookieConsent = lazy(() => import('./components/CookieConsent'));
 
 export default function App() {
   const [activeSection, setActiveSection] = useState('hero');
@@ -33,31 +36,48 @@ export default function App() {
     setSelectedPlanName(planName);
   };
 
-  // Intersection Observer to update Navbar active indicator on scroll
+  // Update the Navbar active indicator on scroll. Because several of these
+  // sections are lazy-loaded, they aren't in the DOM when this effect first
+  // runs — so we (re)attach the observer as sections mount, via a
+  // MutationObserver that disconnects itself once every section is found.
   useEffect(() => {
-    const sections = ['hero', 'pricing', 'setup', 'speedtest', 'faq'];
-    const observers = sections.map((id) => {
-      const el = document.getElementById(id);
-      if (!el) return null;
+    const sectionIds = ['hero', 'pricing', 'setup', 'speedtest', 'faq'];
+    const observed = new Set<Element>();
 
-      const observer = new IntersectionObserver(
-        ([entry]) => {
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setActiveSection(id);
+            setActiveSection(entry.target.id);
           }
-        },
-        { threshold: 0.25 }
-      );
-      observer.observe(el);
-      return { observer, el };
-    });
+        });
+      },
+      { threshold: 0.25 }
+    );
 
-    return () => {
-      observers.forEach((obs) => {
-        if (obs) {
-          obs.observer.unobserve(obs.el);
+    const mo = new MutationObserver(() => attach());
+
+    const attach = () => {
+      sectionIds.forEach((id) => {
+        const el = document.getElementById(id);
+        if (el && !observed.has(el)) {
+          io.observe(el);
+          observed.add(el);
         }
       });
+      if (observed.size === sectionIds.length) {
+        mo.disconnect();
+      }
+    };
+
+    attach(); // observe whatever is already in the DOM (hero, etc.)
+    if (observed.size < sectionIds.length) {
+      mo.observe(document.body, { childList: true, subtree: true });
+    }
+
+    return () => {
+      io.disconnect();
+      mo.disconnect();
     };
   }, []);
 
@@ -71,21 +91,39 @@ export default function App() {
       <main className="relative">
         <Hero onNavigate={handleNavigate} />
         <ChannelLogos />
-        <AboutUs />
-        <FilmsTrending />
-        <Pricing onSelectPlan={handleSelectPlan} />
-        <Testimonials />
-        <SetupGuide />
-        <Diagnostics />
-        <ContactFAQ />
+        <Suspense fallback={null}>
+          <AboutUs />
+        </Suspense>
+        <Suspense fallback={null}>
+          <FilmsTrending />
+        </Suspense>
+        <Suspense fallback={null}>
+          <Pricing onSelectPlan={handleSelectPlan} />
+        </Suspense>
+        <Suspense fallback={null}>
+          <Testimonials />
+        </Suspense>
+        <Suspense fallback={null}>
+          <SetupGuide />
+        </Suspense>
+        <Suspense fallback={null}>
+          <Diagnostics />
+        </Suspense>
+        <Suspense fallback={null}>
+          <ContactFAQ />
+        </Suspense>
       </main>
 
       {/* Footer copyright, navigations & security seals */}
-      <Footer onNavigate={handleNavigate} />
+      <Suspense fallback={null}>
+        <Footer onNavigate={handleNavigate} />
+      </Suspense>
 
       {/* Persistent floating support access + cookie consent */}
-      <FloatingWhatsApp selectedPlanName={selectedPlanName} />
-      <CookieConsent />
+      <Suspense fallback={null}>
+        <FloatingWhatsApp selectedPlanName={selectedPlanName} />
+        <CookieConsent />
+      </Suspense>
     </div>
     </LazyMotion>
   );
