@@ -1,2 +1,2 @@
 // Real business WhatsApp number (international format, no + or spaces)
-export const WHATSAPP_NUMBER = '447414662070';
+export const WHATSAPP_NUMBER = '447832486269';
