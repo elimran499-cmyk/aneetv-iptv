@@ -170,6 +170,7 @@ export default function Pricing({ onSelectPlan }: PricingProps) {
 
               {/* Order CTA - opens WhatsApp directly with the pack pre-filled */}
               <a
+                data-cta="order"
                 href={whatsappOrderHref}
                 target="_blank"
                 rel="noopener noreferrer"
