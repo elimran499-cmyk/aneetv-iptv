@@ -7,8 +7,8 @@ interface HeroProps {
 }
 
 const STATS = [
-  { icon: Tv, value: '69.000+', label: 'Wereldwijde Zenders' },
-  { icon: Film, value: '170.000+', label: 'Films & Series' },
+  { icon: Tv, value: '80.000+', label: 'Wereldwijde Zenders' },
+  { icon: Film, value: '200.000+', label: 'Films & Series' },
   { icon: Activity, value: '99.9%', label: 'Serverbeschikbaarheid' },
   { icon: Users, value: '18.420+', label: 'Actieve Abonnees' },
 ];
@@ -50,8 +50,8 @@ export default function Hero({ onNavigate }: HeroProps) {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="mt-6 text-lg text-slate-500 dark:text-slate-400 max-w-xl mx-auto leading-relaxed"
         >
-          Stream meer dan <strong className="text-slate-700 dark:text-slate-200">69.000 zenders</strong> en{' '}
-          <strong className="text-slate-700 dark:text-slate-200">170.000+ films & series</strong> in haarscherpe 4K, zonder kabels of schotels.
+          Stream meer dan <strong className="text-slate-700 dark:text-slate-200">80.000 zenders</strong> en{' '}
+          <strong className="text-slate-700 dark:text-slate-200">200.000+ films & series</strong> in haarscherpe 4K, zonder kabels of schotels.
         </m.p>
 
         {/* Primary CTA + subtle secondary link, instead of two equal-weight buttons */}

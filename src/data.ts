@@ -11,7 +11,7 @@ export const PLANS_DATA: Plan[] = [
     description: 'Populaire keuze voor een heel jaar met scherpe korting.',
     features: [
       '20.000+ Wereldwijde Kanalen & VOD\'s',
-      '170.000+ Films & Series (op aanvraag)',
+      '200.000+ Films & Series (op aanvraag)',
       'Basis Sportzenders (Eredivisie & Champions League)',
       '4K, FHD & HD Kwaliteit',
       'Geavanceerde Anti-Buffer v3.2',
@@ -33,7 +33,7 @@ export const PLANS_DATA: Plan[] = [
     description: 'De ultieme entertainment-deal. Bespaar meer dan 50% met ons meest gekozen pakket, inclusief 2 schermen.',
     features: [
       '45.000+ Wereldwijde Kanalen & VOD\'s',
-      '170.000+ Films & Series (op aanvraag)',
+      '200.000+ Films & Series (op aanvraag)',
       '2 Gelijktijdige Schermen Inbegrepen',
       'Netflix, Disney+ & HBO Content',
       'Ziggo Sport Basis',
@@ -56,8 +56,8 @@ export const PLANS_DATA: Plan[] = [
     screens: 1,
     description: 'Zorgeloos genieten voor de absolute laagste prijs per maand.',
     features: [
-      '69.000+ Wereldwijde Kanalen & VOD\'s',
-      '170.000+ Films & Series (op aanvraag)',
+      '80.000+ Wereldwijde Kanalen & VOD\'s',
+      '200.000+ Films & Series (op aanvraag)',
       'Netflix, Disney+, HBO, Prime Video, Videoland & Discovery+',
       'Ziggo Sport & Viaplay incl. Formule 1',
       'ESPN Nederland (Eredivisie Live)',
